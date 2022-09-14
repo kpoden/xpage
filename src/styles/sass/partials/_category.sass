@@ -1,0 +1,72 @@
+.category
+    position: relative
+    z-index: 10000
+    width: 469px
+    height: 60px
+    border: 2px solid $black
+    min-width: 270px
+
+    +mw(650)
+        margin-bottom: 25px
+        width: 90%
+
+    &.is-active .category__body
+	    display: block
+
+    &__header
+        cursor: pointer
+        display: flex
+        padding-left: 25px
+        
+
+        &.more:after
+            right: 30px       
+            transform: rotate(135deg) translateY(80%) 
+
+    &__current
+        font-size: 16px
+        padding: 8px
+        line-height: 44px
+
+
+    &__body
+        border: 2px solid $black
+        display: none
+        left: 0
+        position: absolute
+        right: 0
+        top: 100%
+        background: #E5E5E5;
+        margin: 0 -1px
+        padding-left: 25px
+        height: 200px
+        overflow-x: auto 
+        scrollbar-width: thin;
+        scrollbar-color: $black
+
+        &::-webkit-scrollbar 
+            width: 9px;
+
+        &::-webkit-scrollbar-track
+            background: $black
+    
+        &::-webkit-scrollbar-thumb 
+            background-color: $black
+            border-radius: 0px
+            border: 3px solid $black
+
+    &__item
+        cursor: pointer
+        font-weight: 400
+        font-size: 16px
+        line-height: 135%
+        line-height: 24px
+        padding: 8px
+        transition: .2s
+
+        &:hover
+            color: $red
+
+.is-active .more:after
+        transform: rotate(-45deg)
+
