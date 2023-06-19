@@ -1,60 +1,17 @@
-svg
-    max-width: 18px
-    max-height: 20px
-    
-.btn
-    background: transparent
-    border: 2px solid $red;
-    border-radius: 56px;
-    font-weight: 500
-    font-size: 16px
-    text-align: center
-    padding: 16px 27px
-    display: block
-    cursor: pointer
-    transition: .2s
+.section-title
+    font-weight: 700
+    font-size: 48px
+    line-height: 120%
+    padding-top: 50px
+    padding-bottom: 80px
 
-.more
-    &::after
-        position: absolute
-        border-style: solid
-        border-width: 0.15em 0.15em 0 0
-        content: ''
-        display: inline-block
-        height: 0.45em
-        right: -23px
-        top: 50%
-        vertical-align: top
-        width: 0.45em
-        transform: rotate(135deg) translateY(80%)
-        cursor: pointer
-        transition: .1s
+    +mw(1150)
+        font-size: 40px
+        padding-bottom: 60px
 
-        
+    +mw(750)
+        padding-bottom: 25px
 
-.disabled-item
-    color: $light-grey
-
-    &:hover
-        color: $light-grey !important
-
-.disabled-el
-    border: 2px solid $light-grey !important
-    color: $light-grey
-
-.focused
-    top: -8px !important
-    font-size: 11px !important
-
-.form-alert
-    padding-top: 20px
-    font-size: 18px
-
-._err
-    border-bottom: 1px solid $red !important
-
-.err-msg
-    color: $red
-
-.success-msg
-    color: green
+    +mw(600)
+        font-size: 18px
+        padding-top: 15px
