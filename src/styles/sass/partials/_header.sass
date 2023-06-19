@@ -1,0 +1,188 @@
+.header
+    font-weight: 700
+    font-size: 20px
+    line-height: 135%
+    border-bottom: 4px solid $black 
+    padding-bottom: 24px
+    +mw(1240)
+        padding-bottom: 50px
+
+    &__top
+        padding-top: 52px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 60px
+
+        +mw(510)
+            flex-direction: column-reverse
+
+        &-btn
+            &:hover
+                border: #ff0000 2px solid
+
+
+        &-right
+            max-width: 400px
+            height: 50px
+
+        &-phone
+            margin-right: 44px
+            
+
+        &-search
+            margin-top: 2px
+            cursor: pointer
+            svg
+                padding-top: 2px
+
+
+    &__bottom
+        display: flex
+        justify-content: space-between
+        position: relative
+
+        +mw(1240)
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+    &__menu
+        transition: all 2.3s
+    .menu
+        z-index: 10000
+        
+
+        +mw(1240)
+            height: 0px
+            overflow: hidden
+        
+        &__list
+            display: flex
+
+            +mw(1240)
+                flex-direction: column
+                justify-content: flex-end
+                align-items: center
+                
+
+        &__item
+            margin-right: 48px
+            position: relative
+
+            +mw(1400)
+                margin-right: 25px
+            +mw(1240)
+                padding-bottom: 15px
+
+        
+
+
+
+        &__sublist
+            display: none
+            position: absolute
+            z-index: 10000
+            top: 25px
+            left: 0
+            background: #e5e5e5
+            padding: 15px 18px
+            border: 2px solid $black
+
+        &__subitem
+            padding-bottom: 15px
+
+            &:hover
+                color: $red
+
+        &__item:hover>a .menu__sublist
+                display: block !important
+
+
+        &.mob-active
+            height: auto;
+            overflow: visible
+
+
+    .subscribe
+        display: flex
+        align-items: center
+
+        +mw(670)
+            flex-direction: column
+
+        &__text
+            margin-right: 48px
+            +mw(670)
+                padding: 15px
+                margin-right: 0
+
+        &__icons
+            display: flex
+            align-items: center
+
+            span
+                height: 100%
+                line-height: 16px
+                padding-right: 16px
+                
+                svg
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+.menu__item.more
+    &:after
+        +mw(1240)
+            top: 30%
+            right: -20px
+
+
+.menu__mob
+    height: 50px
+    width: 70px
+    position: absolute
+    left: 0
+    cursor: pointer
+    display: none
+
+    &-line
+        margin-bottom: 10px
+        display: block
+        height: 8px
+        background: $black
+
+    +mw(1240)
+        display: block
+
+    +mw(650)
+        width: 40px
+        height: 30px
+
+        &-line
+            margin-bottom: 10px
+            display: block
+            height: 6px
+            background: $black
+
+
+
+.mob-active .menu__mob-line
+    background: $red
+
+.mob-active .menu__mob-line:first-child
+    transform: rotate(45deg) translateY(12px)
+
+.mob-active .menu__mob-line:nth-child(2)
+    display: none
+
+.mob-active .menu__mob-line:last-child
+    transform: rotate(-45deg) translateY(-12px)
+
+
++mw(650) 
+    .mob-active .menu__mob-line:first-child
+        transform: rotate(45deg) translateY(11px)
+
+    .mob-active .menu__mob-line:last-child
+        transform: rotate(-45deg) translateY(-11px)
